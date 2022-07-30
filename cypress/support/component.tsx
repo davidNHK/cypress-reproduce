@@ -35,6 +35,10 @@ setGlobalConfig(globalStorybookConfig);
 // Alternatively, can be defined in cypress/support/component.d.ts
 // with a <reference path="./component" /> at the top of your spec.
 function TestBed(props: PropsWithChildren) {
+  // @ts-ignore
+  import("./example.css")
+  // @ts-ignore
+  import("../../.storybook/preview.css")
   return (
     <main>
       <h1 className={'sample-bg tw-block tw-font-bold'}>TestBed</h1>
